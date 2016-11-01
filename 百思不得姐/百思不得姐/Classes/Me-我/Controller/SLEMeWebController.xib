@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SLEMeWebController">
+            <connections>
+                <outlet property="back" destination="ggx-tk-qIS" id="hD2-Ai-1Ht"/>
+                <outlet property="go" destination="cth-uY-ciA" id="twP-rj-cfT"/>
+                <outlet property="progressView" destination="jmj-Q2-mJC" id="e75-wn-bXx"/>
+                <outlet property="refresh" destination="0eX-EM-mSr" id="Jrs-Ws-ZJl"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="webView" destination="mMt-Mt-LGz" id="Qby-go-Ix5"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mMt-Mt-LGz">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                </webView>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jcx-uG-cgf">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                    <items>
+                        <barButtonItem title="返回" id="ggx-tk-qIS" userLabel="返回">
+                            <connections>
+                                <action selector="back:" destination="-1" id="YJZ-uL-rgA"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem title="前进" id="cth-uY-ciA" userLabel="前进">
+                            <connections>
+                                <action selector="go:" destination="-1" id="yw4-aZ-csw"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="zwc-PZ-ebb"/>
+                        <barButtonItem title="刷新" id="0eX-EM-mSr" userLabel="刷新">
+                            <connections>
+                                <action selector="refresh:" destination="-1" id="K98-QN-YeF"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                </toolbar>
+                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="jmj-Q2-mJC">
+                    <rect key="frame" x="0.0" y="-2" width="150" height="2"/>
+                </progressView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="mMt-Mt-LGz" secondAttribute="bottom" id="2OP-CH-TrA"/>
+                <constraint firstItem="jcx-uG-cgf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="3Jt-Xm-kLh"/>
+                <constraint firstItem="mMt-Mt-LGz" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="4fu-G5-sum"/>
+                <constraint firstItem="jmj-Q2-mJC" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="Lbo-PF-X52"/>
+                <constraint firstAttribute="bottom" secondItem="jcx-uG-cgf" secondAttribute="bottom" id="Y7r-ld-HXs"/>
+                <constraint firstItem="mMt-Mt-LGz" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="hm9-gA-A5V"/>
+                <constraint firstAttribute="trailing" secondItem="jcx-uG-cgf" secondAttribute="trailing" id="u4Y-0a-GoO"/>
+                <constraint firstItem="jmj-Q2-mJC" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="u6s-mV-xPY"/>
+                <constraint firstAttribute="trailing" secondItem="mMt-Mt-LGz" secondAttribute="trailing" id="uBb-j7-b7o"/>
+                <constraint firstAttribute="trailing" secondItem="jmj-Q2-mJC" secondAttribute="trailing" id="wBI-a2-dgF"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="mMt-Mt-LGz"/>
+                    <exclude reference="jcx-uG-cgf"/>
+                    <exclude reference="jmj-Q2-mJC"/>
+                </mask>
+                <mask key="constraints">
+                    <exclude reference="Lbo-PF-X52"/>
+                    <exclude reference="u6s-mV-xPY"/>
+                    <exclude reference="wBI-a2-dgF"/>
+                    <exclude reference="3Jt-Xm-kLh"/>
+                    <exclude reference="Y7r-ld-HXs"/>
+                    <exclude reference="u4Y-0a-GoO"/>
+                    <exclude reference="2OP-CH-TrA"/>
+                    <exclude reference="4fu-G5-sum"/>
+                    <exclude reference="hm9-gA-A5V"/>
+                    <exclude reference="uBb-j7-b7o"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=regular">
+                <mask key="subviews">
+                    <include reference="mMt-Mt-LGz"/>
+                    <include reference="jcx-uG-cgf"/>
+                    <include reference="jmj-Q2-mJC"/>
+                </mask>
+                <mask key="constraints">
+                    <include reference="Lbo-PF-X52"/>
+                    <include reference="u6s-mV-xPY"/>
+                    <include reference="wBI-a2-dgF"/>
+                    <include reference="3Jt-Xm-kLh"/>
+                    <include reference="Y7r-ld-HXs"/>
+                    <include reference="u4Y-0a-GoO"/>
+                    <include reference="2OP-CH-TrA"/>
+                    <include reference="4fu-G5-sum"/>
+                    <include reference="hm9-gA-A5V"/>
+                    <include reference="uBb-j7-b7o"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="249" y="162.5"/>
+        </view>
+    </objects>
+</document>

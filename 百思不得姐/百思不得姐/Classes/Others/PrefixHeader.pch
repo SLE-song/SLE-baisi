@@ -1,0 +1,39 @@
+//
+//  PrefixHeader.pch
+//  百思不得姐
+//
+//  Created by apple on 16/7/18.
+//  Copyright © 2016年 slebaisitu. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "UIView+SLEExtention.h"
+#import "UIBarButtonItem+SLEExtention.h"
+#import "SLEConst.h"
+#import "NSDate+SLEExtension.h"
+#import "UIImage+SLEExtension.h"
+#import "NSString+SLEExtension.h"
+
+#ifdef DEBUG
+
+#define SLELog(...)  NSLog(__VA_ARGS__)
+
+#else
+
+#define SLELog(...)
+
+#endif
+
+#define SLELogFunc  SLELog(@"%s",__func__);
+
+#define SLEColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+#define SLEGlobalBg  SLEColor(223, 223, 223)
+#define SLETagBg  SLEColor(74, 139, 209);
+#define SLETagFont [UIFont systemFontOfSize:14]
+
+#define SLEScreenW [UIScreen mainScreen].bounds.size.width
+#define SLEScreenH [UIScreen mainScreen].bounds.size.height
+
+#endif /* PrefixHeader_pch */
